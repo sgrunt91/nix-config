@@ -1,28 +1,34 @@
 {
-  time.timeZone = "Europe/Berlin";
+  # Timezone & location
+  time.timeZone = "Europe/Paris";
   location.provider = "geoclue2";
 
-  # Locale settings
-  i18n.defaultLocale = "en_US.UTF-8";
+  # Locales
+  i18n = {
+    defaultLocale = "fr_FR.UTF-8";           # main system locale
+    supportedLocales = [ "fr_FR.UTF-8" "en_US.UTF-8" ];  # generated locales
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_CA.UTF-8";
-    LC_MONETARY = "de_DE.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "de_DE.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "en_CA.UTF-8";
+    # Optional: fine-grained LC_* overrides
+    extraLocaleSettings = {
+      LC_ADDRESS = "fr_FR.UTF-8";
+      LC_IDENTIFICATION = "fr_FR.UTF-8";
+      LC_MEASUREMENT = "fr_FR.UTF-8";
+      LC_MONETARY = "fr_FR.UTF-8";
+      LC_NAME = "fr_FR.UTF-8";
+      LC_NUMERIC = "fr_FR.UTF-8";
+      LC_PAPER = "fr_FR.UTF-8";
+      LC_TELEPHONE = "fr_FR.UTF-8";
+      LC_TIME = "fr_FR.UTF-8";
+    };
   };
 
-  # Console keymap
-  console.keyMap = "de";
+  # Console (TTY) keyboard layout
+  console.keyMap = "fr";
 
-  # x11 Keymap
+  # X11 keyboard layout
   services.xserver.xkb = {
-    layout = "de";
-    variant = "";
+    layout = "fr";
+    variant = "azerty"; 
   };
 }
+
