@@ -1,14 +1,12 @@
-{
-  # Timezone & location
+i{
   time.timeZone = "Europe/Paris";
   location.provider = "geoclue2";
 
-  # Locales
   i18n = {
-    defaultLocale = "fr_FR.UTF-8";           # main system locale
-    supportedLocales = [ "fr_FR.UTF-8" "en_US.UTF-8" ];  # generated locales
+    defaultLocale = "fr_FR.UTF-8";  # main system locale
 
-    # Optional: fine-grained LC_* overrides
+    extraLocales = [ "en_US.UTF-8" ];  # any additional locales you need
+
     extraLocaleSettings = {
       LC_ADDRESS = "fr_FR.UTF-8";
       LC_IDENTIFICATION = "fr_FR.UTF-8";
@@ -22,13 +20,13 @@
     };
   };
 
-  # Console (TTY) keyboard layout
+  # Console (TTY)
   console.keyMap = "fr";
 
-  # X11 keyboard layout
+  # X11
   services.xserver.xkb = {
     layout = "fr";
-    variant = "azerty"; 
+    variant = "azerty";
   };
 }
 
