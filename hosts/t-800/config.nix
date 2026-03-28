@@ -4,6 +4,7 @@
 }:
 {
   modules = {
+    boot.deviceType = "legacy";
     services.hypridle.desktop = true;
     powerManagement.hdparm.enable = true;
   };
