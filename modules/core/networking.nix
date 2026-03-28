@@ -1,7 +1,7 @@
 {
   networking.networkmanager = {
     enable = true;
-    wifi.backend = "iwd";
+    wifi.backend = "wpa_supplicant";
     wifi.scanRandMacAddress = true;
     wifi.macAddress = "random";
   };
