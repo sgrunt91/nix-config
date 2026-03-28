@@ -5,7 +5,7 @@
   i18n = {
     defaultLocale = "fr_FR.UTF-8";  # main system locale
 
-    extraLocales = [ "en_US.UTF-8" ];  # any additional locales you need
+    extraLocales = [];  # any additional locales you need
 
     extraLocaleSettings = {
       LC_ADDRESS = "fr_FR.UTF-8";
