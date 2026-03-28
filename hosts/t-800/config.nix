@@ -13,4 +13,8 @@
 
   home-manager.users.${username} =
     { pkgs, ... }:
+    {
+      # home-manager options here
+    };
 }
+
