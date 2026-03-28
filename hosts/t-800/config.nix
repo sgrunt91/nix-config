@@ -18,5 +18,4 @@
           [ "sleep 1 && goose-shell ipc call networking setWifiEnabled false" ]
         ];
       };
-    };
 }
