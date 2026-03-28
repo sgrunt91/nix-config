@@ -13,9 +13,4 @@
 
   home-manager.users.${username} =
     { pkgs, ... }:
-    {
-        spawn-sh-at-startup = [
-          [ "sleep 1 && goose-shell ipc call networking setWifiEnabled false" ]
-        ];
-      };
 }
